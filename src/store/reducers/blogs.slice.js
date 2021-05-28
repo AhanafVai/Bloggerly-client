@@ -26,16 +26,18 @@ const { blogsRequested, blogsRequestFailed, blogsReceived } = slice.actions
 export default slice.reducer
 
 // Action Creator
-export const LOAD_BLOGS = searchQuery => dispatch => {
-  dispatch(
-    apiCallBegan({
-      url: `search?q=${searchQuery}&lang=en&${URL.API_TOKEN}`,
-      onStart: blogsRequested.type,
-      onSuccess: blogsReceived.type,
-      onError: blogsRequestFailed.type,
-    })
-  )
-}
+export const LOAD_BLOGS =
+  (searchQuery = "Technology") =>
+  dispatch => {
+    dispatch(
+      apiCallBegan({
+        url: `search?q=${searchQuery}&lang=en&${URL.API_TOKEN}`,
+        onStart: blogsRequested.type,
+        onSuccess: blogsReceived.type,
+        onError: blogsRequestFailed.type,
+      })
+    )
+  }
 
 // Selectors
 export const isBlogLoadingSelector = state => state.blogs.loading

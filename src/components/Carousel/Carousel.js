@@ -1,13 +1,13 @@
 import React from 'react';
-import c1 from '../../images/c1.jpg'
-import c2 from '../../images/c2 .jpg'
-import c3 from '../../images/c3.jpg'
+import c1 from '../../images/c1.jpg';
+import c2 from '../../images/c2 .jpg';
+import c3 from '../../images/c3.jpg';
 
 const Carousel = () => {
     return (
         <section className="container my-4">
             <h2 className="text-center">TRENDING</h2>
-            <div id="carouselExampleControls" classNameName="carousel slide" data-bs-ride="carousel">
+            <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                        <div className="row">
