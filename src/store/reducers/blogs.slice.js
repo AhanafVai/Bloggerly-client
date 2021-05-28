@@ -7,6 +7,7 @@ const slice = createSlice({
   initialState: {
     articles: [],
     loading: false,
+    bookmarks: [],
   },
   reducers: {
     blogsRequested: blogs => {
