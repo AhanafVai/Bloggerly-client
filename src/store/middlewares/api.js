@@ -8,13 +8,14 @@ const api =
   async action => {
     if (action.type !== actions.apiCallBegan.type) return next(action)
 
-    const { url, method, data, onStart, onSuccess, onError } = action.payload
+    const { baseURL, url, method, data, onStart, onSuccess, onError } =
+      action.payload
     if (onStart) dispatch({ type: onStart })
     next(action)
 
     try {
       const response = await axios.request({
-        baseURL: URL.BASE_URL,
+        baseURL: baseURL ? baseURL : URL.BASE_URL,
         url,
         method,
         data,
