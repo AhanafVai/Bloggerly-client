@@ -1,3 +1,4 @@
+const { default: Blogs } = require("../components/Blogs/Blogs");
 const { default: Carousel } = require("../components/Carousel/Carousel");
 const { default: NavBar } = require("../components/NavBar/NavBar");
 
@@ -6,6 +7,7 @@ function Home() {
     <section className="homepage">
       <NavBar></NavBar>
       <Carousel></Carousel>
+      <Blogs></Blogs>
     </section>
   )
 }
