@@ -6,7 +6,7 @@
     "@formspree/react": "^2.2.3",
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
+    "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "firebase": "^8.6.3",
@@ -46,6 +46,8 @@
   },
   "devDependencies": {
     "eslint": "^7.27.0",
-    "eslint-plugin-react": "^7.23.2"
+    "eslint-plugin-react": "^7.23.2",
+    "jest-dom": "^4.0.0",
+    "react-test-renderer": "^17.0.2"
   }
 }
