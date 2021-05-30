@@ -5,3 +5,50 @@ body {
   box-sizing: border-box;
   font-family: "Recursive", sans-serif;
 }
+
+.button-primary {
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 35px;
+  border-radius: 5px;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 100%;
+  outline: none;
+  border: none;
+  color: rgb(83, 83, 83);
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  background: linear-gradient(315deg, #ffffff 0%, #fffc00 74%);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.button-primary:hover {
+  color: black;
+  background: linear-gradient(315deg, #fffc00 0%, #ffffff 74%);
+}
+.button-primary:after {
+  background: #fff;
+  border: 0px solid #000;
+  content: "";
+  height: 155px;
+  left: -75px;
+  opacity: 0.8;
+  position: absolute;
+  top: -50px;
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+  width: 50px;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 1;
+}
+.button-primary:hover:after {
+  background: #fff;
+  border: 20px solid #000;
+  opacity: 0;
+  left: 120%;
+  -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
+}

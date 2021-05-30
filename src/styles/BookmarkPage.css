@@ -1,0 +1,158 @@
+#BookmarkPage {
+  background-color: #eee;
+  min-height: 100vh;
+  padding: 2rem 0;
+}
+
+.bookmark-page-title {
+  background-color: white;
+  display: inline-block;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: rgb(68, 68, 68);
+}
+
+.bookmark-container {
+  display: flex;
+  place-items: center;
+}
+
+.bookmarkCard {
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+  width: 40%;
+  height: 400px;
+  margin: 3em 1em;
+  overflow: hidden;
+  background: #000;
+  box-shadow: rgba(6, 33, 63, 0.129412) 0px 1px 2px 0px;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.bookmark-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  visibility: visible;
+}
+
+.bookmarkCard img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.bookmarkCard:hover img {
+  top: 30%;
+  opacity: 0.5;
+}
+
+.bookmarkCard:hover .bookmark-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  visibility: visible;
+}
+
+.bookmarkCard .overlay {
+  position: absolute;
+  bottom: calc(-80% + 50px);
+  left: 0px;
+  width: 100%;
+  height: 80%;
+  background: #fff;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.bookmarkCard:hover .overlay {
+  bottom: 0px;
+}
+
+.bookmarkCard .overlay .line {
+  width: 100%;
+  text-align: left;
+  line-height: 50px;
+  padding: 0em 1em;
+}
+.content-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  visibility: visible;
+}
+.bookmarkCard .overlay .content {
+  text-align: justify;
+  padding: 1em;
+}
+
+@media screen and (max-width: 700px) {
+  .bookmarkCard {
+    width: 100%;
+    height: auto;
+    margin: 1em 0em;
+  }
+  .bookmarkCard:hover img {
+    top: 30%;
+    opacity: 0.5;
+  }
+  .bookmarkCard:hover .bookmark-title {
+    -webkit-line-clamp: 1;
+  }
+  .content-text {
+    -webkit-line-clamp: 3;
+  }
+
+  .bookmarkCard .overlay {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 200px;
+  }
+  .bookmarkCard img {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    -ms-transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    transform: translate(-50%, 0%);
+  }
+  .bookmarkCard:hover .overlay {
+    bottom: 0px;
+  }
+  .bookmarkCard:hover img {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .bookmark-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+  }
+}
