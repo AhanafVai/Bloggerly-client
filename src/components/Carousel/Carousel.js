@@ -5,9 +5,12 @@ import c3 from '../../images/c3.jpg';
 
 const Carousel = () => {
     return (
-        <section className="container my-4">
-            <h2 className="text-center">TRENDING</h2>
+        <>
+        
+        <section className="container my-4 d-flex align-items-center" style={{height:"600px"}}>
+           
             <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+                 <h2 className="text-center pb-4">TRENDING</h2>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                        <div className="row">
@@ -62,6 +65,7 @@ const Carousel = () => {
                 </button>
             </div>
         </section>
+        </>
     );
 };
 

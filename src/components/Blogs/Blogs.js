@@ -14,9 +14,9 @@ const Blogs = () => {
             <h2 className="text-center mt-5">RECENT PUBLISHED</h2>
             <div className="d-flex justify-content-center">
 
-                <div className="container row mt-2">
+                <div className="container  mt-5">   
                     {
-                        blogs.map((blog) => (<Blog key={blog.key} blog={blog}> </Blog>))
+                        blogs.map((blog) => (<Blog key={blog.key} blog={blog}> </Blog>))  
                     }
                 </div>
             </div>

@@ -1,0 +1,21 @@
+.blog-img{
+    height: 350px;
+    width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .blog-img {
+     height: 300px;
+    width: 300px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .blog-title{
+    font-size: 1rem;
+ 
+  }
+  .blog-description{
+font-size: .75rem;
+
+  }
+}
