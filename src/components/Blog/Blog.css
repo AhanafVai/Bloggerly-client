@@ -1,21 +1,36 @@
-.blog-img{
-    height: 350px;
-    width: 500px;
+.blog-img {
+  height: 300px;
+  width: 500px;
 }
 
 @media only screen and (max-width: 768px) {
   .blog-img {
-     height: 300px;
-    width: 300px;
+    height: 170px !important;
+    width: 310px !important;
     padding-right: 10px;
     padding-bottom: 10px;
   }
-  .blog-title{
+  .blog-title {
     font-size: 1rem;
- 
   }
-  .blog-description{
-font-size: .75rem;
+  .blog-description {
+    font-size: 0.75rem;
+  }
+}
 
+@media only screen and (max-width: 1370px) {
+  .blog-img {
+    height: 230px;
+    width: 400px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+  }
+  .blog-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  .blog-description {
+    font-size: 0.75rem;
   }
 }

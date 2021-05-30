@@ -1,14 +1,13 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import { ADD_BOOKMARK } from "../../store/reducers/blogs.slice";
-import "./Blog.css";
+import React from "react"
+import { useDispatch } from "react-redux"
+import { Link } from "react-router-dom"
+import { ADD_BOOKMARK } from "../../store/reducers/blogs.slice"
+import "./Blog.css"
 
-const Blog = (props) => {
-  const dispatch = useDispatch();
-  const LoggedInUser = JSON.parse(sessionStorage.getItem("user"));
-  const { title, image, publishedAt, url, description, source } = props.blog;
-  console.log(props.blog);
+const Blog = props => {
+  const dispatch = useDispatch()
+  const LoggedInUser = JSON.parse(sessionStorage.getItem("user"))
+  const { title, image, publishedAt, url, description, source } = props.blog
   return (
     //! jahid vai er design change if don't like the look
     // <div className="col-md-4">
@@ -34,11 +33,12 @@ const Blog = (props) => {
       </div>
       <div className="col-md-6  ">
         <div>
-          <h4 className="blog-title">{title} </h4>
+          <h4 className="blog-title text-secondary">{title} </h4>
           <p>
             {" "}
             <small>
-              Collected <a href={source.url}> {source.name} </a>{" "}
+              <i className="fas fa-search-location"></i> Collected From{" "}
+              <a href={source.url}> {source.name} </a>{" "}
             </small>{" "}
           </p>
 
@@ -53,20 +53,22 @@ const Blog = (props) => {
         <div className="card-footer ">
           {LoggedInUser ? (
             <button
-              className="btn btn-sm"
+              className="btn btn-sm fw-bolder text-uppercase text-secondary"
               onClick={() => dispatch(ADD_BOOKMARK(props.blog))}
             >
-              Bookmark
+              <i className="fas fa-bookmark"></i> Bookmark
             </button>
           ) : (
             <Link to="/login">
-              <button className="btn btn-sm">Login To Bookmark</button>
+              <button className="btn btn-sm fw-bolder text-uppercase text-secondary">
+                <i className="fas fa-sign-in-alt"></i> Login To Bookmark
+              </button>
             </Link>
           )}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog
