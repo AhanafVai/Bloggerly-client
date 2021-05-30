@@ -1,5 +1,6 @@
 const { default: Blogs } = require("../components/Blogs/Blogs");
 const { default: Carousel } = require("../components/Carousel/Carousel");
+const { default: Footer } = require("../components/Footer/Footer");
 const { default: NavBar } = require("../components/NavBar/NavBar");
 
 function Home() {
@@ -8,6 +9,7 @@ function Home() {
       <NavBar></NavBar>
       <Carousel></Carousel>
       <Blogs></Blogs>
+      <Footer/>
     </section>
   )
 }
