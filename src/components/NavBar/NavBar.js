@@ -1,9 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "./NavBar.css";
+import React from "react"
+import { Link } from "react-router-dom"
+import useCurrentUser from "../../store/hooks/useCurrentUser"
+import "./NavBar.css"
 
 const NavBar = () => {
-  const LoggedInUser = JSON.parse(sessionStorage.getItem("user"));
+  const LoggedInUser = useCurrentUser()
 
   return (
     <div className="sticky-navbar">
@@ -37,19 +38,11 @@ const NavBar = () => {
               <Link to="bookmarks" className="nav-link mx-3" href="#">
                 Bookmarks
               </Link>
-              <Link
-                to="activity"
-                className="nav-link mx-3"
-                href="#"
-                tabIndex="-1"
-                aria-disabled="true"
-              >
-                Activity
-              </Link>
-
-              <Link to="login" className="nav-link mx-3" href="#">
-                Login
-              </Link>
+              {!LoggedInUser && (
+                <Link to="login" className="nav-link mx-3" href="#">
+                  Login
+                </Link>
+              )}
 
               {LoggedInUser && (
                 <Link
@@ -58,7 +51,7 @@ const NavBar = () => {
                   aria-disabled="true"
                 >
                   <img
-                    style={{ width: "40px", borderRadius: "50px" }}
+                    style={{ width: "40px", borderRadius: "50px", marginRight: "7px" }}
                     src={LoggedInUser.photoURL}
                     alt={LoggedInUser.name}
                   />{" "}
@@ -70,7 +63,7 @@ const NavBar = () => {
         </div>
       </nav>
     </div>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
