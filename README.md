@@ -13,6 +13,7 @@
 <ul>
     <li>React JS</li>
     <li>Redux JS</li>
+    <li>Redux toolkit</li>
     <li>Bootstrap</li>
     <li>NODE JS</li>
     <li>MONGODB</li>
